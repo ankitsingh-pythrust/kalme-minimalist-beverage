@@ -1,0 +1,213 @@
+<!-- Container -->
+<div style="background:#000;color:#fff;line-height:1.6;">
+  <!-- Header (exactly 100px tall, no buttons) -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand" aria-label="KALMĒ">KALMĒ</div>
+      <input id="menuToggle" type="checkbox" class="menu-toggle" aria-label="Toggle navigation"/>
+      <label for="menuToggle" class="burger" aria-hidden="false">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav">
+        <a href="#about" (click)="$event.preventDefault(); scrollTo('about')">About</a>
+        <a href="#features" (click)="$event.preventDefault(); scrollTo('features')">Features</a>
+        <a href="#products" (click)="$event.preventDefault(); scrollTo('products')">Products</a>
+        <a href="#pricing" (click)="$event.preventDefault(); scrollTo('pricing')">Pricing</a>
+        <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')">Testimonials</a>
+      </nav>
+      <div class="mobile-menu">
+        <a href="#about" (click)="$event.preventDefault(); scrollTo('about'); (document.getElementById('menuToggle') as HTMLInputElement).checked=false">About</a>
+        <a href="#features" (click)="$event.preventDefault(); scrollTo('features'); (document.getElementById('menuToggle') as HTMLInputElement).checked=false">Features</a>
+        <a href="#products" (click)="$event.preventDefault(); scrollTo('products'); (document.getElementById('menuToggle') as HTMLInputElement).checked=false">Products</a>
+        <a href="#pricing" (click)="$event.preventDefault(); scrollTo('pricing'); (document.getElementById('menuToggle') as HTMLInputElement).checked=false">Pricing</a>
+        <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials'); (document.getElementById('menuToggle') as HTMLInputElement).checked=false">Testimonials</a>
+        <a href="#faq" (click)="$event.preventDefault(); scrollTo('faq'); (document.getElementById('menuToggle') as HTMLInputElement).checked=false">FAQ</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="section hero">
+    <mat-card class="hero-card">
+      <div class="hero-wrap">
+        <div class="hero-text">
+          <h1 class="h1">Kalmē — minimalist, premium refreshment</h1>
+          <p class="sub">Black-label calm in every sip. A beverage brand crafted for design-conscious palates.</p>
+          <div class="cta-row">
+            <button mat-stroked-button class="btn-ghost">Get Started</button>
+            <button mat-stroked-button class="btn-ghost">Learn More</button>
+          </div>
+          <p class="micro">No distractions. Just purity and balance.</p>
+        </div>
+      </div>
+    </mat-card>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="h2">About Kalmē</h2>
+      <p class="lead">We design premium, minimalist beverages for modern routines — clean ingredients, refined flavor, and a calm, elevated experience.</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="h2">Features that define the vibe</h2>
+      <div class="grid">
+        <mat-card class="feature-card">
+          <mat-card-title>Minimalist Aesthetic</mat-card-title>
+          <mat-card-content>Monochrome design that lets quality speak for itself.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card">
+          <mat-card-title>Premium Ingredients</mat-card-title>
+          <mat-card-content>Sourced for clarity, balance, and a smooth finish.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card">
+          <mat-card-title>Refined Flavor</mat-card-title>
+          <mat-card-content>Subtle profiles engineered for all-day calm.</mat-card-content>
+        </mat-card>
+        <mat-card class="feature-card">
+          <mat-card-title>Zero Noise</mat-card-title>
+          <mat-card-content>No excess sugar, colors, or clutter — just Kalmē.</mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="section">
+    <div class="container">
+      <h2 class="h2">Signature lineup</h2>
+      <div class="grid">
+        <mat-card class="product-card">
+          <mat-card-title>Original</mat-card-title>
+          <mat-card-content>Pure, balanced, and quietly confident.</mat-card-content>
+          <button mat-stroked-button class="btn-ghost w-100">Buy Now</button>
+        </mat-card>
+        <mat-card class="product-card">
+          <mat-card-title>Citrus</mat-card-title>
+          <mat-card-content>Crisp notes with a restrained finish.</mat-card-content>
+          <button mat-stroked-button class="btn-ghost w-100">Buy Now</button>
+        </mat-card>
+        <mat-card class="product-card">
+          <mat-card-title>Berry</mat-card-title>
+          <mat-card-content>Lightly tart, elegantly balanced.</mat-card-content>
+          <button mat-stroked-button class="btn-ghost w-100">Buy Now</button>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2 class="h2">Simple pricing</h2>
+      <p class="lead">Transparent, flexible options for tasting and daily ritual.</p>
+      <div class="grid">
+        <mat-card class="price-card">
+          <mat-card-title>Single</mat-card-title>
+          <div class="price">$4<span class="unit"> / bottle</span></div>
+          <ul class="list">
+            <li>One-time purchase</li>
+            <li>Any flavor</li>
+            <li>Perfect for sampling</li>
+          </ul>
+          <button mat-stroked-button class="btn-ghost w-100">Choose Single</button>
+        </mat-card>
+        <mat-card class="price-card">
+          <mat-card-title>6-Pack</mat-card-title>
+          <div class="price">$22<span class="unit"> / pack</span></div>
+          <ul class="list">
+            <li>Mix & match flavors</li>
+            <li>Best value</li>
+            <li>Ships carbon-neutral</li>
+          </ul>
+          <button mat-stroked-button class="btn-ghost w-100">Choose 6-Pack</button>
+        </mat-card>
+        <mat-card class="price-card">
+          <mat-card-title>Subscription</mat-card-title>
+          <div class="price">$19<span class="unit"> / month</span></div>
+          <ul class="list">
+            <li>Monthly delivery</li>
+            <li>Exclusive drops</li>
+            <li>Pause anytime</li>
+          </ul>
+          <button mat-stroked-button class="btn-ghost w-100">Subscribe</button>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2 class="h2">What people say</h2>
+      <div class="grid">
+        <mat-card class="quote-card">
+          <p class="quote">“Clean, modern, and effortlessly premium.”</p>
+          <p class="author">— Aria L.</p>
+        </mat-card>
+        <mat-card class="quote-card">
+          <p class="quote">“A calm flavor profile that doesn’t shout.”</p>
+          <p class="author">— Dev M.</p>
+        </mat-card>
+        <mat-card class="quote-card">
+          <p class="quote">“Minimal in design, maximal in taste.”</p>
+          <p class="author">— Noor K.</p>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="h2">FAQ</h2>
+      <mat-accordion class="faq">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>What makes Kalmē premium?</span>
+          </mat-expansion-panel-header>
+          <p>Thoughtfully sourced ingredients, minimalist formulation, and consistent flavor engineering.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>Is there added sugar?</span>
+          </mat-expansion-panel-header>
+          <p>No excess sugar or colorants — we keep it clean and balanced.</p>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <span>Do you ship internationally?</span>
+          </mat-expansion-panel-header>
+          <p>We currently ship to most regions. Exact availability is shown at checkout.</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="foot-brand">KALMĒ</div>
+      <div class="foot-links">
+        <div>
+          <div class="foot-head">Product</div>
+          <a href="#features" (click)="$event.preventDefault(); scrollTo('features')">Features</a>
+          <a href="#products" (click)="$event.preventDefault(); scrollTo('products')">Products</a>
+          <a href="#pricing" (click)="$event.preventDefault(); scrollTo('pricing')">Pricing</a>
+        </div>
+        <div>
+          <div class="foot-head">Company</div>
+          <a href="#about" (click)="$event.preventDefault(); scrollTo('about')">About</a>
+          <a href="#testimonials" (click)="$event.preventDefault(); scrollTo('testimonials')">Testimonials</a>
+          <a href="#faq" (click)="$event.preventDefault(); scrollTo('faq')">FAQ</a>
+        </div>
+      </div>
+    </div>
+    <mat-divider class="foot-divider"></mat-divider>
+    <div class="container foot-bottom">© 2025 Kalmē. All rights reserved.</div>
+  </footer>
+</div>
